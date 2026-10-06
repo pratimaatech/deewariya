@@ -1,0 +1,45 @@
+RewriteEngine On
+
+RewriteBase /arts/
+
+
+# =====================================================
+# MANAGER / ADMIN DIRECTORY
+# =====================================================
+
+RewriteRule ^manager(/|$) - [L]
+
+
+# =====================================================
+# SERVICE DETAIL
+# =====================================================
+
+RewriteRule ^servicedetail/([0-9]+)/?$ index.php?page=servicedetail&id=$1 [L,QSA]
+
+
+# =====================================================
+# BLOG DETAIL
+# =====================================================
+
+RewriteRule ^blogdetal/([0-9]+)/?$ index.php?page=blogdetal&id=$1 [L,QSA]
+
+
+# =====================================================
+# BLOG CATEGORY
+# =====================================================
+
+RewriteRule ^blog/category/([0-9]+)/?$ index.php?page=blog&category=$1 [L,QSA]
+
+
+# =====================================================
+# PROJECT DETAIL
+# =====================================================
+
+RewriteRule ^projectdetail/([0-9]+)/?$ index.php?page=projectdetail&id=$1 [L,QSA]
+
+
+# =====================================================
+# NORMAL PAGES
+# =====================================================
+
+RewriteRule ^([a-zA-Z0-9_-]+)/?$ index.php?page=$1 [L,QSA]
