@@ -22,10 +22,10 @@ class Config
     {
 
         // Database connection
-        $host = '127.0.0.1:3306';
-        $user = 'root';
+        $host = '';
+        $user = '';
         $pass = '';
-        $db   = 'arts';
+        $db   = '';
 
         $con = mysqli_connect($host, $user, $pass, $db);
 
